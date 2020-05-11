@@ -1,27 +1,29 @@
 {
-  "name": "netflix-online-search",
-  "version": "1.0.0",
-  "description": "",
+  "name": "moviedb",
+  "version": "0.0.1",
+  "description": "Membuat aplikasi web dengan javascript (ES6) dan module lainnya untuk menyelesaikan submission di platform dicoding.com",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start-dev": "webpack-dev-server --config webpack.dev.js"
+    "start-dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imanfauzi29/netflix-search-movie.git"
+    "url": "git+https://github.com/imanfauzi29/moviedb.git"
   },
-  "author": "",
+  "author": "Iman Fauzi M",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/imanfauzi29/netflix-search-movie/issues"
+    "url": "https://github.com/imanfauzi29/moviedb/issues"
   },
-  "homepage": "https://github.com/imanfauzi29/netflix-search-movie#readme",
+  "homepage": "https://github.com/imanfauzi29/moviedb#readme",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
+    "font-awesome-webpack": "0.0.5-beta.2",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "style-loader": "^1.2.1",
@@ -32,7 +34,10 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
-  }
+    "jquery": "^3.5.1"
+  },
+  "keywords": [
+    "dicoding mission",
+    "movie"
+  ]
 }
