@@ -1,0 +1,37 @@
+/*** card item in content ***/
+#content card-item .card {
+	transition: .3s ease;
+}
+
+#content card-item .card img{
+	--webkit-filter: brightness(70%);
+	filter: brightness(70%);
+	transition: .3s ease;
+}
+
+#content card-item .card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0 3px 3px #0fb48c;
+}
+
+#content card-item .card:hover img {
+	--webkit-filter: none;
+	filter: none;
+}
+
+.card {
+	background: var(--dark);
+}
+
+.card-title {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.card-title, .card-subtitle {
+	color: #fff;
+}
+
+.card-body .card-title:hover {
+	color: #0fb48c;
+}

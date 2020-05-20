@@ -1,0 +1,55 @@
+/* Navbar custom */
+.navbar-nav .nav-link {
+	color: #fff !important;
+	font-size: 16px;
+}
+
+.active {
+	font-weight: 700 !important;
+}
+
+@media (min-width: 992px) {
+	.wrap{
+		width: 100%;
+		margin: 0 2.75rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.wrap {
+		width: calc(100% - 200px);
+		margin: 0 1rem;
+	}
+}
+
+.wrap {
+	position: relative;
+	display: inline-block;
+}
+
+.wrap input {
+	width: 100%;
+	border-radius: 3px;
+	border: 0;
+	line-height: 30px;
+	padding-left: 10px;
+	color: #626262;
+	transition: .3s ease;
+}
+
+.wrap input:focus {
+	box-shadow: 0 0 1px 2px #0fb48c;
+}
+
+.wrap .btn-search {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: none;
+	outline: none;
+	border: none;
+	padding-right: 15px;
+	color: #868686;
+}
+

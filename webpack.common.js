@@ -10,23 +10,20 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }
     ]
   },
-  performance: {
-    hints: false
-  },
   plugins: [
-    new HtmlPackPlugin({
-      template: './src/index.html',
-      filename: 'index.html'
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    })
+  new HtmlPackPlugin({
+    template: './src/index.html',
+    filename: 'index.html'
+  }),
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery'
+  })
   ]
 }

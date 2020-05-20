@@ -43,50 +43,38 @@
 		</div>
 	</nav>
 
-	<div class="container mt-3">
-		<div class="row" id="content"></div>
-	</div>
+  <div class="container-fluid">
+    <card-list class="d-flex flex-row flex-nowrap overflow-x-scroll py-2">
+    </card-list>
+  </div>
 
-	<div class="c-alert-overlay" tabindex="-1">
-		<div class="c-alert-box" role="dialog">
-			<div class="c-alert-title">
-        <span>
-				<i class="far fa-check-circle"></i>
-        </span>
-			</div>
-			<div class="c-alert-text">
-				opss somethime wrongs!..
-			</div>
-			<div class="c-alert-footer">
-				<div class="c-alert-button">
-					<div class="alert-button" id="alert-button">OK</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		const btnAlert = document.getElementById('alert-button');
-			const overlay = document.querySelector('.c-alert-overlay');
-			const box = document.querySelector('.c-alert-box');
+  <div class="container mt-3">
+    <div id="content">
+      <card-list class="row"></card-list>
+    </div>
+  </div>
 
-		btnAlert.addEventListener('click', () => {
-    overlay.classList.remove('c-display');
-			setTimeout(() => {
-				overlay.style.display = 'none';
-			}, 300)
-		});
-
-	const btn = document.querySelector('.btn-search');
-	btn.addEventListener('click', () => {
-		overlay.classList.add('c-display');
-    box.classList.add('animate-alert-box');
-		setTimeout(() => {
-			overlay.style.display = 'inline-block';
-		}, 300)
-	})
-
-	</script>
-
+  <!-- modal -->
+  <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
 </body>
 
 </html>
