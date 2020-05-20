@@ -1,16 +1,9 @@
-import $ from "jquery";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 import "./styles/style.css";
-import main from "./scripts/main.js";
+import "./scripts/components/bs-heading.js";
+import getMovie from "./scripts/main-page.js";
 
-main();
-
-$(() => {
-	$('#navbarDropdownMenuLink').click(function() {
-		$(this).parent().find('.dropdown-menu').toggle()
-	})
-})
-
+getMovie();
 
 /*
 key: 18b6ac76ada34bba374b08f5932d3416;

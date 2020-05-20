@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
 		<div class="container">
 			<a class="navbar-brand" href="#">Navbar</a>
 			<div class="wrap">
@@ -17,64 +17,34 @@
 					<button type="button" class="btn-search"><i class="fa fa-search"></i></button>
 				</div>
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Categories
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="#">Adventure</a>
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">...</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Rating</a>
-					</li>
-				</ul>
-			</div>
+
 		</div>
-	</nav>
+  </nav>
 
-  <div class="container-fluid">
-    <card-list class="d-flex flex-row flex-nowrap overflow-x-scroll py-2">
-    </card-list>
-  </div>
-
-  <div class="container mt-3">
-    <div id="content">
-      <card-list class="row"></card-list>
-    </div>
+  <div id="content">
   </div>
 
   <!-- modal -->
   <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- end modal -->
+  <!-- end modal -->
 </body>
 
 </html>

@@ -1,11 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
 @import './navbar.css';
 @import './alert.css';
 @import './card.css';
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Roboto&display=swap');
+
+:root {
+	--primary: #0fb48c;
+}
+::-webkit-scrollbar {
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 50px;
+	border-top: 1px solid gray;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--primary);
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: #079472;
+}
 
 body {
-	font-family: 'Barlow', sans-serif;
-	background: #141414;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -14,5 +34,18 @@ a {
 
 .overflow-x-scroll {
 	overflow-x: scroll;
-	white-space: nowrap;
+}
+
+bs-heading {
+	position: relative;
+}
+
+bs-heading::before {
+	content: '';
+	height: 80%;
+	width: 5px;
+	background-color: var(--primary);
+	position: absolute;
+	left: 0;
+	top: 0;
 }

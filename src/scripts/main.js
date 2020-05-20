@@ -1,42 +1,48 @@
+import $ from "jquery";
 import "./font-awesome.js";
-import alertMessage from "./alert-message.js";
-import "./components/card-list.js";
+import "bootstrap/js/src/modal.js"
+import "./components/bs-heading.js";
+import "./main-page.js";
+mainMovie();
+// function main() {
+//   const base_url = 'https://api.themoviedb.org/3/';
+//   const key = '18b6ac76ada34bba374b08f5932d3416';
 
-function main() {
-  const base_url = 'https://api.themoviedb.org';
-  const key = '18b6ac76ada34bba374b08f5932d3416';
+//   const getMovie = async () => {
 
-  const getMovieX = async () => {
-    try{
-      const response = await fetch(`${base_url}/3/movie/popular?api_key=${key}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      });
-      const jsonResponse = await response.json();
-      if(jsonResponse.success == false) {
-        alertMessage('error', jsonResponse.status_message);
-      }else {
-        renderMovie(jsonResponse.results);
-      }
-    }catch(e) {
-      alert-message('error', e)
-    }
-  }
+//     try{
+//       const response = await fetch(`${base_url}movie/popular?api_key=${key}`, {
+//         method: 'GET',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         }
+//       });
 
-  const renderMovie = listMovie => {
-    const movieList = document.querySelector('card-list');
-    movieList.movies = listMovie;
-  }
+//       const jsonResponse = await response.json();
+//       if(response.status == 200) {
+//         renderMovie(jsonResponse.results);
+//       }else {
+//         alertMessage('error', jsonResponse.status_message);
+//       }
+
+//     }catch(e) {
+//       alertMessage('error', e)
+//     }
+
+//   }
+
+//   const renderMovie = (listMovie) => {
+//     const cardList = document.querySelectorAll('card-list');
+//     cardList.forEach(list => {
+//       list.movies = listMovie
+//     })
+//   }
+
+//   document.addEventListener('DOMContentLoaded', () => {
+//   })
+
+//   getMovie();
+// }
 
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const movieList = document.querySelector('card-list');
-  })
-
-  getMovieX();
-}
-
-
-export default main;
+// export default main;

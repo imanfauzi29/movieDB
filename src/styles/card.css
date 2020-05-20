@@ -4,34 +4,34 @@
 }
 
 #content card-item .card img{
+	transition: transform .5s ease-in, filter .3s ease;
+}
+
+#content card-item img:hover {
+	transform: scale(1.02);
 	--webkit-filter: brightness(70%);
 	filter: brightness(70%);
-	transition: .3s ease;
-}
-
-#content card-item .card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 0 3px 3px #0fb48c;
-}
-
-#content card-item .card:hover img {
-	--webkit-filter: none;
-	filter: none;
+	
 }
 
 .card {
-	background: var(--dark);
+	background-color: transparent;
+	border: none;
+}
+
+.card img {
+	border-radius: 5px !important;
 }
 
 .card-title {
 	font-size: 1rem;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 .card-title, .card-subtitle {
-	color: #fff;
+	color: #333;
 }
 
 .card-body .card-title:hover {
-	color: #0fb48c;
+	color: var(--primary);
 }

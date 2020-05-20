@@ -130,7 +130,7 @@
 }
 
 .alert-button {
-	background-color: #0fb48c;
+	background-color: var(--primary);
 	color: #fff;
 	border: none;
 	box-shadow: none;
