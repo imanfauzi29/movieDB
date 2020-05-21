@@ -1,12 +1,25 @@
 /* card-list */
 customElements.define('card-list', class extends HTMLElement {
-	connectedCallback() {
-		this.setAttribute('class', 'd-flex flex-row flex-nowrap overflow-x-scroll py-2');
+
+	get style() {
+		return this.getAttribute('class')
+	}
+
+	set style(value) {
+		this.setAttribute('class', value)
 	}
 
 	set movies(movies) {
 		this._movies = movies;
 		this.render();
+	}
+
+	get column(){
+		return this.getAttribute('column');
+	}
+
+	set column(column) {
+		this.setAttribute('column', column)
 	}
 
 	render() {
@@ -16,12 +29,27 @@ customElements.define('card-list', class extends HTMLElement {
 			this.appendChild(cardItemElement);
 		})
 	}
+
+	attributeChangeCallback(name, oldValue, newValue) {
+		this[name] = newValue;
+	}
+
+	static get observedAttributes() {
+		return ['class', 'column']
+	}
 });
 
 /* card-item */
 customElements.define('card-item', class extends HTMLElement {
+
 	connectedCallback() {
-		this.setAttribute('class', 'px-2');
+		const movieList = document.querySelector('card-list');
+
+		if(movieList.hasAttribute('column')){
+			this.setAttribute('class', 'col-sm-6 col-md-2')
+		}else {
+			this.setAttribute('class', 'mx-2')
+		}
 	}
 
 	set list(movie) {
@@ -47,3 +75,27 @@ customElements.define('card-item', class extends HTMLElement {
 	}
 })
 
+/* heading */
+
+customElements.define('bs-heading', class extends HTMLElement {
+	connectedCallback() {
+		this.setAttribute('class', 'pl-2 mb-3 d-flex');
+	}
+
+	set title(value) {
+		this._title = value;
+		this.render();
+	}
+
+	render() {
+		this.innerHTML = `<h4 class="text-capitalize text-light font-weight-bold">${this._title}</h4>`;
+	}
+
+	attributeChangeCallback(name, oldValue, newValue) {
+		this[name] = newValue;
+	}
+
+	static get observedAttributes() {
+		return ['title'];
+	}
+})

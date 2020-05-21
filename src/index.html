@@ -8,43 +8,105 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-		<div class="container">
-			<a class="navbar-brand" href="#">Navbar</a>
-			<div class="wrap">
-				<div class="search-box">
-					<input type="text" name="search" id="" class="search-input" placeholder="search here...">
-					<button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">MovieDB</a>
+			<search-bar></search-bar>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Rating</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Genre
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">DLL..</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="content">
+
+	</div>
+
+	<footer>
+		<div class="jumbotron">
+			<div class="container">
+				<div class="d-flex w-100 justify-content-center">
+					<ul class="inline-list">
+						<li class="inline-list-item icon-item">
+							<a href="https://facebook.com/#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="inline-list-item icon-item">
+							<a href="https://twitter.com/#"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="inline-list-item icon-item">
+							<a href="https://instagram.com/#"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li class="inline-list-item icon-item">
+							<a href="https://youtube.com/#"><i class="fab fa-youtube"></i></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="d-flex w-100 justify-content-center">
+					<ul class="inline-list">
+						<li class="inline-list-item inline-item">
+							<a href="#">about</a>
+						</li>
+						<li class="inline-list-item inline-item">
+							<a href="#">contact us</a>
+						</li>
+						<li class="inline-list-item inline-item">
+							<a href="#">support</a>
+						</li>
+						<li class="inline-list-item inline-item">
+							<a href="#">terms of use</a>
+						</li>
+						<li class="inline-list-item inline-item">
+							<a href="#">privacy policy</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-
 		</div>
-  </nav>
+	</footer>
 
-  <div id="content">
-  </div>
-
-  <!-- modal -->
-  <div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end modal -->
+	<!-- modal -->
+	<div class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Modal body text goes here.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end modal -->
 </body>
 
 </html>

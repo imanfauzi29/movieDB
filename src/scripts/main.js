@@ -1,48 +1,34 @@
 import $ from "jquery";
-import "./font-awesome.js";
-import "bootstrap/js/src/modal.js"
-import "./components/bs-heading.js";
-import "./main-page.js";
-mainMovie();
-// function main() {
-//   const base_url = 'https://api.themoviedb.org/3/';
-//   const key = '18b6ac76ada34bba374b08f5932d3416';
+import MoviesData from "./data/movies-data.js";
+import getMovie from "./main-page.js";
+import searchPage from "./search-page.js";
+import loader from "./loader.js";
 
-//   const getMovie = async () => {
+const content = document.getElementById('content');
+const urls = MoviesData.url('search/movie');
 
-//     try{
-//       const response = await fetch(`${base_url}movie/popular?api_key=${key}`, {
-//         method: 'GET',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         }
-//       });
+const main = () => {
+	const searchElement = document.querySelector('search-bar');
 
-//       const jsonResponse = await response.json();
-//       if(response.status == 200) {
-//         renderMovie(jsonResponse.results);
-//       }else {
-//         alertMessage('error', jsonResponse.status_message);
-//       }
+	const onButtonClicked = async () => {
 
-//     }catch(e) {
-//       alertMessage('error', e)
-//     }
+		if(searchElement.searchValue != '' || null) {
+			
+			try{
+				content.innerHTML = '';
+				content.innerHTML = loader();
+				const SearchQuery = await MoviesData.searchQuery(urls, searchElement.searchValue);
+				searchPage(SearchQuery)
+			}catch(e) {
+				searchPage(e)
+			}
 
-//   }
+		}else {
+			return;
+		}
+	}
+	searchElement.clickButton = onButtonClicked;
 
-//   const renderMovie = (listMovie) => {
-//     const cardList = document.querySelectorAll('card-list');
-//     cardList.forEach(list => {
-//       list.movies = listMovie
-//     })
-//   }
+}
 
-//   document.addEventListener('DOMContentLoaded', () => {
-//   })
-
-//   getMovie();
-// }
-
-
-// export default main;
+export default main;

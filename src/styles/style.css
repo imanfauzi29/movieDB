@@ -26,6 +26,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	background-color: #000000;
 }
 
 a {
@@ -48,4 +49,44 @@ bs-heading::before {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+footer .jumbotron {
+	background-color: #000;
+}
+
+.inline-list {
+	display: inline-flex;
+	justify-content: center;
+}
+
+.icon-item {
+	font-size: 1.75rem;
+	border-bottom: 4px solid transparent;
+	transition: .5s;
+}
+
+.icon-item:hover {
+	transform: translateY(-5px);
+	border-bottom-color: #fff;
+}
+
+.icon-item a {
+	color: #fff;
+	cursor: pointer;
+}
+
+.inline-list-item {
+	list-style: none;
+	padding: 0 0.5rem 0.25rem 0.5rem;
+	margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+.inline-item a {
+	font-size: 1rem;
+	color: #fff;
+}
+
+.inline-item a:hover {
+	text-decoration: underline !important;
 }
