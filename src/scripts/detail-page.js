@@ -18,6 +18,9 @@ function render(data) {
   const content = document.querySelector('#content');
   content.innerHTML = '';
 
+  const poster = (data.poster_path == null)
+  ? `https://dummyimage.com/460x690/b0b0b0/fff.jpg&text=no+image`
+  : `https://image.tmdb.org/t/p/w500${data.poster_path}`;
   content.innerHTML = `
 		<div class="container-fluid mt-3">
 		<div class="detail py-3">

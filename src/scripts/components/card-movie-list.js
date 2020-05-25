@@ -62,11 +62,13 @@ customElements.define('card-item', class extends HTMLElement {
       ? this._movie.title.substr(0, 20) + '...'
       : this._movie.title;
 
-    console.log(this._movie.poster_path);
+    const poster = (this._movie.poster_path == null)
+    ? `https://dummyimage.com/185x278/b0b0b0/fff.jpg&text=no+image`
+    : `https://image.tmdb.org/t/p/w185${this._movie.poster_path}`;
     this.innerHTML = `
   		<div class="card text-wrap" style="width:10rem">
   		<a class="description" href="#" data-id="${this._movie.id}">
-  		<img src="https://image.tmdb.org/t/p/w185${this._movie.poster_path}" class="card-img-top" alt="${this._movie.title}">
+  		<img src="${poster}" class="card-img-top" alt="${this._movie.title}">
   		</a>
   		<div class="card-body">
   		<h6 class="card-subtitle"><i class="fa fa-star text-warning"></i> ${this._movie.vote_average}</h6>
