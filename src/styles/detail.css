@@ -1,0 +1,41 @@
+
+.detail {
+	background-color: #2b3942;
+	border-radius: 5px;
+}
+
+.subtext {
+	margin-top: .5rem;
+}
+
+.subtext .lang {
+	color: #fff;
+	padding: 0 5px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	border: 1px solid #fff;
+}
+
+.col-md-2 .hidden-text {
+	display: none;
+}
+
+.separators::before {
+	content: '\2022';
+	margin-left: .75rem;
+	margin-right: .75rem;
+}
+
+.rate span:first-child {
+	font-size: 1.75rem;
+}
+
+.rate span:not(:first-child) {
+	color: rgba(255,255,255, 0.8);
+	font-size: 12px;
+}
+
+.overview h3, .subkeyword h3 {
+	font-size: 1.45rem;
+	font-weight: bolder;
+}

@@ -11,7 +11,10 @@
 	transform: scale(1.02);
 	--webkit-filter: brightness(70%);
 	filter: brightness(70%);
-	
+}
+
+.list-movie {
+	background-color: #2b3942;
 }
 
 .card {
@@ -33,5 +36,23 @@
 }
 
 .card-body .card-title:hover {
-	color: var(--primary);
+	color: var(--secondary);
+}
+
+.overflow-x-scroll {
+	overflow-x: scroll;
+}
+
+bs-heading {
+	position: relative;
+}
+
+bs-heading::before {
+	content: '';
+	height: 80%;
+	width: 5px;
+	background-color: var(--secondary);
+	position: absolute;
+	left: 0;
+	top: 0;
 }
