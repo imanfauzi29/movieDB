@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "./styles/style.css";
 
+import "./scripts/font-awesome.js";
 import "./scripts/main-page.js";
 import MovieUrl from "./scripts/data/movie-url.js";
 import searchPage from "./scripts/search-page.js";
@@ -17,8 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const DataSearch = () => {
     if (searchElement.value != '' || null) {
       searchPage(url, searchElement.value)
-    } else {
-      return;
     }
   }
 

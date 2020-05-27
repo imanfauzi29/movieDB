@@ -1,11 +1,13 @@
 /* get Details Movie */
 const detail = urls => {
+
 	// promise all url to get data
   Promise.all(urls.map(url =>
 		fetch(url)
 		.then(res => res.json())
 		.then(resJson => resJson)
 		.catch(e => console.log(e))))
+
 		.then(datas => {
 	    const {[0]: detail, [1]: keyword} = datas;
 	    const data = Object.assign({keywords: keyword.keywords}, detail);
@@ -14,13 +16,16 @@ const detail = urls => {
 }
 
 // render movie
-function render(data) {
+const render = data => {
+	
   const content = document.querySelector('#content');
   content.innerHTML = '';
 
+  /* if poster no picture, set picture from dummyimage.com then give the text no image */
   const poster = (data.poster_path == null)
   ? `https://dummyimage.com/460x690/b0b0b0/fff.jpg&text=no+image`
   : `https://image.tmdb.org/t/p/w500${data.poster_path}`;
+
   content.innerHTML = `
 		<div class="container-fluid mt-3">
 		<div class="detail py-3">
